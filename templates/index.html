@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<div class="container">
+   <nav>
+    <div class="right-nav-content">
+        <div class="logo">
+            <img src="{{url_for('static',filename='images/logo2.png')}}">
+        </div>
+        <div class="menu-icons">
+            <div class="notifications">
+                <img src="{{url_for('static',filename='images/notification.png')}}">
+                <p class="number-of-notifications">12</p>
+            </div>
+            <div class="messages">
+                <img src="{{url_for('static',filename='images/message.png')}}">
+                <p class="number-of-notifications">14</p>
+            </div>
+            <div class="videos">
+                <img src="{{url_for('static',filename='images/watch.png')}}">
+                <p class="number-of-notifications">32</p>
+            </div>
+        </div>
+    </div>
+    <div class="left-nav-content">
+        <div class="search-content">
+            <img src="{{url_for('static',filename='images/search.png')}}">
+            <input type="text" placeholder="SEARCH">
+        </div>
+        <div class="profile-pic">
+           <img src="{{url_for('static',filename='images/profile.jpg')}}" onclick="dispalySettingMenu()">
+        </div>
+    </div>
+       <div class="settings-menu">
+           <div>
+               <div class="identification">
+                   <img src="{{url_for('static',filename='images/profile.png')}}">
+                   <div class="info">
+                       <p>John Nicholison</p>
+                       <a href="#">See your profile</a>
+                   </div>
+               </div>
+               <hr>
+               <div class="identification">
+                   <img src="{{url_for('static',filename='images/feedback.png')}}">
+                   <div class="info">
+                       <p>Give Feedback</p>
+                       <a href="#">improve design</a>
+                   </div>
+               </div>
+               <hr>
+               <div class="other-info">
+                   <div class="other-settings">
+                       <img src="{{url_for('static',filename='images/setting.png')}}">
+                       <a href="#"> Setting & Privacy</a>
+
+                   </div>
+                   <img class="arrow" src="{{url_for('static',filename='images/arrow.png')}}">
+               </div>
+               <div class="other-info">
+                   <div class="other-settings">
+                       <img src="{{url_for('static',filename='images/help.png')}}">
+                       <a href="#">Help & Support</a>
+
+                   </div>
+                   <img class="arrow" src="{{url_for('static',filename='images/arrow.png')}}">
+               </div>
+               <div class="other-info">
+                   <div class="other-settings">
+                       <img src="{{url_for('static',filename='images/display.png')}}">
+                       <a href="#"> Display & Acessibility</a>
+
+                   </div>
+                   <img class="arrow" src="{{url_for('static',filename='images/arrow.png')}}">
+               </div>
+               <div class="other-info">
+                   <div class="other-settings">
+                       <img src="{{url_for('static',filename='images/logout.png')}}">
+                       <a href="#"> Logout</a>
+
+                   </div>
+                   <img class="arrow" src="{{url_for('static',filename='images/arrow.png')}}">
+               </div>
+           </div>
+           <div id="changeMode-btn">
+               <div id="state" onclick="changemode()">
+
+               </div>
+       </div>
+   </nav>
+    <div class="container2">
+        <div class="left-navbar">
+            <a href="#"><img src="{{url_for('static',filename='images/news.png')}}">Latest News</a>
+            <a href="#"><img src="{{url_for('static',filename='images/friends.png')}}">Friends</a>
+            <a href="#"><img src="{{url_for('static',filename='images/group.png')}}">Groups</a>
+            <a href="#"><img src="{{url_for('static',filename='images/marketplace.png')}}">Marketplace</a>
+            <a href="#"><img src="{{url_for('static',filename='images/watch.png')}}">Watch</a>
+            <div class="see-more">
+                <a>See More</a>
+            </div>
+            <div class="more-content">
+                <h4>Your Shortcuts</h4>
+                <a href="#"><img src="{{url_for('static',filename='images/shortcut-1.png')}}">Web Developers</a>
+                <a href="#"><img src="{{url_for('static',filename='images/shortcut-2.png')}}">Web Design Course</a>
+                <a href="#"><img src="{{url_for('static',filename='images/shortcut-3.png')}}">Full Stack Development</a>
+                <a href="#"><img src="{{url_for('static',filename='images/shortcut-4.png')}}">Website Experts</a>
+                <a href="#"></a>
+            </div>
+
+        </div>
+        <div class="main-content">
+            <div class="list-of-status">
+                <div class="status-1">
+                    <img src="{{url_for('static',filename='images/status-1.png')}}">
+                    <div class="add-story-1">
+                        <img src="{{url_for('static',filename='images/upload.png')}}">
+                        <p>Post Story</p>
+                    </div>
+                </div>
+                <div class="status-2">
+                    <img src="{{url_for('static',filename='images/status-2.png')}}">
+                    <div class="add-story-2">
+                        <img src="{{url_for('static',filename='images/member-1.png')}}">
+                        <p>Alison mina</p>
+                    </div>
+                </div>
+                <div class="status-3">
+                    <img src="{{url_for('static',filename='images/status-3.png')}}">
+                    <div class="add-story-3">
+                        <img src="{{url_for('static',filename='images/member-2.png')}}">
+                        <p>Jackson Aston</p>
+                    </div>
+                </div>
+                <div class="status-4">
+                    <img src="{{url_for('static',filename='images/status-4.png')}}">
+                    <div class="add-story-4">
+                        <img src="{{url_for('static',filename='images/member-3.png')}}">
+                        <p>Samona Rose</p>
+                    </div>
+                </div>
+                <div class="status-5">
+                    <img src="{{url_for('static',filename='images/status-5.png')}}">
+                    <div class="add-story-5">
+                        <img src="{{url_for('static',filename='images/member-4.png')}}">
+                        <p>Nelson Atuti</p>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-info">
+                <div>
+                    <img src="{{url_for('static',filename='images/profile.png')}}">
+                    <div class="info">
+                        <p>John Nicholison</p>
+                        <span><small>public</small><img src="{{url_for('static',filename='images/arrow.png')}}"></span>
+                    </div>
+
+                </div>
+                <div class="feelings">
+                    <p>What's on your mind john?</p>
+                    <textarea></textarea>
+                    <div>
+                        <a><img src="{{url_for('static',filename='images/live-video.png')}}">
+                            Live Video</a>
+                        <a><img src="{{url_for('static',filename='images/photo.png')}}">
+                            Photo/Video</a>
+                        <a><img src="{{url_for('static',filename='images/feeling.png')}}">
+                            Feeling/Activity</a>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="post">
+                    <div class="identification">
+                      <img src="{{url_for('static',filename='images/profile.png')}}">
+                      <div class="info">
+                        <p>John Nicholison</p>
+                        <span><small>June 24 2023, 11.40pm</small></span>
+                      </div>
+                      <div>
+                        <img src="{{url_for('static',filename='images/more.png')}}">
+                      </div>
+                    </div>
+                    <div class="views">
+                        <p>
+                            Subscribe <span>@ Easy Tutorials </span> Youtube channel to watch more
+                            videos on website development and ui design <a href="#">#Easy Tutorials</a>
+                            <a href="#">#YouTube Channel</a>
+                        </p>
+                        <img src="{{url_for('static',filename='images/feed-image-1.png')}}">
+                    </div>
+                    <div class="like-comment-share">
+                        <a>
+                            <img src="{{url_for('static',filename='images/like-blue.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/comments.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/share.png')}}">
+                            48
+                        </a>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="identification">
+                        <img src="{{url_for('static',filename='images/profile.png')}}">
+                        <div class="info">
+                            <p>John Nicholison</p>
+                            <span><small>June 24 2023, 11.40pm</small></span>
+                        </div>
+                        <div>
+                            <img src="{{url_for('static',filename='images/more.png')}}">
+                        </div>
+                    </div>
+                    <div class="views">
+                        <p>
+                            Subscribe <span>@ Easy Tutorials </span> Youtube channel to watch more
+                            videos on website development and ui design <a href="#">#Easy Tutorials</a>
+                            <a href="#">#YouTube Channel</a>
+                        </p>
+                        <img src="{{url_for('static',filename='images/feed-image-1.png')}}">
+                    </div>
+                    <div class="like-comment-share">
+                        <a>
+                            <img src="{{url_for('static',filename='images/like-blue.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/comments.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/share.png')}}">
+                            48
+                        </a>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="identification">
+                        <img src="{{url_for('static',filename='images/profile.png')}}">
+                        <div class="info">
+                            <p>John Nicholison</p>
+                            <span><small>June 24 2023, 11.40pm</small></span>
+                        </div>
+                        <div>
+                            <img src="{{url_for('static',filename='images/more.png')}}">
+                        </div>
+                    </div>
+                    <div class="views">
+                        <p>
+                            Subscribe <span>@ Easy Tutorials </span> Youtube channel to watch more
+                            videos on website development and ui design <a href="#">#Easy Tutorials</a>
+                            <a href="#">#YouTube Channel</a>
+                        </p>
+                        <img src="{{url_for('static',filename='images/feed-image-1.png')}}">
+                    </div>
+                    <div class="like-comment-share">
+                        <a>
+                            <img src="{{url_for('static',filename='images/like-blue.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/comments.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/share.png')}}">
+                            48
+                        </a>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="identification">
+                        <img src="{{url_for('static',filename='images/image2.jpg')}}">
+                        <div class="info">
+                            <p>John Nicholison</p>
+                            <span><small>June 24 2023, 11.40pm</small></span>
+                        </div>
+                        <div>
+                            <img src="{{url_for('static',filename='images/more.png')}}">
+                        </div>
+                    </div>
+                    <div class="views">
+                        <p>
+                            Subscribe <span>@ Easy Tutorials </span> Youtube channel to watch more
+                            videos on website development and ui design <a href="#">#Easy Tutorials</a>
+                            <a href="#">#YouTube Channel</a>
+                        </p>
+                        <img src="{{url_for('static',filename='images/image2.jpg')}}">
+                    </div>
+                    <div class="like-comment-share">
+                        <a>
+                            <img src="{{url_for('static',filename='images/like-blue.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/comments.png')}}">
+                            48
+                        </a>
+                        <a>
+                            <img src="{{url_for('static',filename='images/share.png')}}">
+                            48
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="load-more-btn">Load More</button>
+        </div>
+        <div class="right-navbar">
+            <div class="event-dates">
+                <div class="event-titles">
+                    <p>Events</p>
+                    <a href="#">See All</a>
+                </div>
+                <div class="event">
+                    <div class="dates">
+                      <p>18</p>
+                      <span>MARCH</span>
+                    </div>
+                  <div class="description">
+                    <p>Mobile Marketing</p>
+                    <small><img src="{{url_for('static',filename='images/location.png')}}">Afritech kenya limited</small>
+                    <a href="#">More Info</a>
+                  </div>
+                </div>
+                <div class="event">
+                    <div class="dates">
+                        <p>18</p>
+                        <span>MARCH</span>
+                    </div>
+                    <div class="description">
+                        <p>Mobile Marketing</p>
+                        <small><img src="{{url_for('static',filename='images/location.png')}}">Afritech kenya limited</small>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="advertisement">
+                <p>Advertisement</p>
+                <a href="#">Close</a>
+            </div>
+            <div class="advert-img">
+                <img src="{{url_for('static',filename='images/advertisement.png')}}">
+            </div>
+            <div class="advertisement">
+                <p>Conversation</p>
+                <a href="#">Hide Chat</a>
+            </div>
+            <div class="online-persons">
+                <a>
+                    <div class="online-status">
+                        <img  src="{{url_for('static',filename='images/member-1.png')}}">
+                   </div>
+                    Alison Mina
+                </a>
+                <a>
+                    <div class="online-status">
+                        <img  src="{{url_for('static',filename='images/member-2.png')}}">
+                    </div>
+                    Jackson Aston
+                </a>
+                <a>
+                    <div class="online-status">
+                        <img  src="{{url_for('static',filename='images/member-3.png')}}">
+                    </div>
+                    Samona Rose
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="footer">
+    <p>Copyright 2023 - Afritech International</p>
+</div>
+<script src="{{url_for('static',filename='js/main.js')}}"></script>
+</body>
+</html>
